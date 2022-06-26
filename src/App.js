@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router';
 import Main from './pages/main';
 import Login from './pages/login';
 
-function App({ auth }) {
+function App({ auth, service }) {
   const [isAuth, setIsAuth] = useState(false);
 
   const onLogIn = (user) => {
@@ -17,7 +17,10 @@ function App({ auth }) {
   return (
     <Routes>
       {isAuth ? (
-        <Route path="/" element={<Main onLogout={onLogout} />} />
+        <Route
+          path="/"
+          element={<Main onLogout={onLogout} service={service} />}
+        />
       ) : (
         <Route path="/" element={<Login onLogIn={onLogIn} />} />
       )}

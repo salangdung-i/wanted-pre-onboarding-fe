@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   Card,
   CardHeader,
@@ -15,25 +15,54 @@ import {
   Board,
   Like,
 } from '../../styles/feedStyles';
+// import Comment from './comment';
 import { BsThreeDots, BsBookmark } from 'react-icons/bs';
 import { MdFavoriteBorder } from 'react-icons/md';
 import { FaRegCommentDots } from 'react-icons/fa';
 import { GrSend } from 'react-icons/gr';
 
-const feed = (props) => {
+const defaultImg = '../images/defaultImg.jpeg';
+const feed = ({ data }) => {
+  const {
+    username,
+    userProfilePhotoURL,
+    userProfilePhotoName,
+    cardPhotoName,
+    cardPhotoURL,
+    likeCount,
+    comments,
+  } = data;
+  const [commentList, setCommentList] = useState(comments);
+  const onAddComment = (comment) => {
+    setCommentList((prev) => [
+      ...prev,
+      { username: localStorage.getItem('username'), comment },
+    ]);
+  };
+
+  const [loaded, setLoaded] = useState(false);
+  const onLoad = useCallback(() => {
+    setLoaded(true);
+  }, []);
+
   return (
     <Card>
       <CardHeader>
         <User>
-          <Img />
-          <Name></Name>
+          <Img
+            style={{ display: loaded ? 'block' : 'none' }}
+            onLoad={onLoad}
+            src={userProfilePhotoURL || defaultImg}
+            alt={userProfilePhotoName}
+          />
+          <Name>{username}</Name>
         </User>
         <Detail>
           <BsThreeDots />
         </Detail>
       </CardHeader>
       <Div>
-        <ContentImg />
+        <ContentImg src={cardPhotoURL} alt={cardPhotoName} />
         <Div>
           <MenuDiv>
             <IconsDiv>
@@ -53,8 +82,8 @@ const feed = (props) => {
           </MenuDiv>
         </Div>
         <Board>
-          <Like>좋아요 1100개</Like>
-          {/* comment */}
+          <Like>좋아요 {likeCount.toLocaleString()}개</Like>
+          {/* <Comment onAddComment={onAddComment} commentList={commentList} /> */}
         </Board>
       </Div>
     </Card>
