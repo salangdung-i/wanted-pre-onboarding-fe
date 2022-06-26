@@ -1,6 +1,11 @@
 import React from 'react';
-
+import GNB from '../pages/components/gnb';
 const main = (props) => {
-  return <div>main</div>;
+  return (
+    <>
+      <GNB />
+    </>
+  );
 };
+
 export default main;
