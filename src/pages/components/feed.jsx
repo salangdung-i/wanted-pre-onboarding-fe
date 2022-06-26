@@ -36,7 +36,7 @@ const feed = ({ data }) => {
   const onAddComment = (comment) => {
     setCommentList((prev) => [
       ...prev,
-      { username: localStorage.getItem('username'), comment },
+      { username: localStorage.getItem('loginUserName'), comment },
     ]);
   };
 
