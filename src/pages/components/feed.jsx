@@ -15,7 +15,7 @@ import {
   Board,
   Like,
 } from '../../styles/feedStyles';
-// import Comment from './comment';
+import Comment from './comment';
 import { BsThreeDots, BsBookmark } from 'react-icons/bs';
 import { MdFavoriteBorder } from 'react-icons/md';
 import { FaRegCommentDots } from 'react-icons/fa';
@@ -83,7 +83,7 @@ const feed = ({ data }) => {
         </Div>
         <Board>
           <Like>좋아요 {likeCount.toLocaleString()}개</Like>
-          {/* <Comment onAddComment={onAddComment} commentList={commentList} /> */}
+          <Comment onAddComment={onAddComment} commentList={commentList} />
         </Board>
       </Div>
     </Card>
