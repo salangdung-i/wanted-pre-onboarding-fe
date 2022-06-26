@@ -39,7 +39,7 @@ const MenuDiv = styled.div`
   margin-left: 60px;
 `;
 
-const Input = styled.div`
+const InputDiv = styled.div`
   width: 268px;
   height: 36px;
   border-radius: 8px;
@@ -70,12 +70,15 @@ const Input = styled.div`
     display: none;
   }
 `;
+const Input = styled.input`
+  background: inherit;
+`;
 
 const Icon = styled.div`
-  height: 100%
+  height: 100%;
   cursor: pointer;
   margin: 0 10px;
   font-size: 28px;
 `;
 
-export { Navbar, NavContainer, Img, RightNav, Input, MenuDiv, Icon };
+export { Navbar, NavContainer, Img, RightNav, InputDiv, Input, MenuDiv, Icon };

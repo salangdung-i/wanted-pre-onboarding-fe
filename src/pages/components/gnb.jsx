@@ -4,6 +4,7 @@ import {
   NavContainer,
   Img,
   RightNav,
+  InputDiv,
   Input,
   MenuDiv,
   Icon,
@@ -24,9 +25,10 @@ const gnb = ({ onLogout }) => {
       <NavContainer>
         <Img logo alt="instagram-logo" src="images/logo.png" />
         <RightNav>
-          <Input>
-            <input type="search" placeholder="search" />
-          </Input>
+          <InputDiv>
+
+            <Input type="search" placeholder="search" />
+          </InputDiv>
           <MenuDiv>
             <Icon>
               <MdHomeFilled />

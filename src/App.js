@@ -11,7 +11,6 @@ function App({ auth, service }) {
   };
 
   const onLogout = () => {
-
     setIsAuth(auth.logout());
   };
 
