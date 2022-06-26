@@ -1,21 +1,22 @@
 class AuthService {
   login(user) {
-    if (localStorage.getItem('username') === null) {
-      localStorage.setItem('username', user.name);
-      localStorage.setItem('password', user.password);
+    if (localStorage.getItem(user.name) === null) {
+      localStorage.setItem(user.name, user.password);
+      localStorage.setItem('loginUserName', user.name);
+      localStorage.setItem('loginUserPasswork', user.password);
+
       return true;
-    } else if (
-      localStorage.getItem('username') === user.name &&
-      localStorage.getItem('password') === user.password
-    ) {
+    } else if (localStorage.getItem(user.name) === user.password) {
+      localStorage.setItem('loginUserName', user.name);
+      localStorage.setItem('loginUserPasswork', user.password);
       return true;
     }
     return false;
   }
 
   logout() {
-    localStorage.removeItem('username');
-    localStorage.removeItem('password');
+    localStorage.removeItem('loginUserName');
+    localStorage.removeItem('loginUserPasswork');
     return false;
   }
 }
