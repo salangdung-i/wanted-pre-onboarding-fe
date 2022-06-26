@@ -3,10 +3,10 @@ import GNB from '../pages/components/gnb';
 import Feed from '../pages/components/feed';
 import styled from 'styled-components';
 
-const main = (props) => {
+const main = ({ onLogout }) => {
   return (
     <>
-      <GNB />
+      <GNB onLogout={onLogout} />
       <Div>
         <Feed />
       </Div>

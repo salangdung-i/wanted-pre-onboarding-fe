@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router';
 import Main from './pages/main';
 import Login from './pages/login';
 
-function App() {
+function App({ auth }) {
+  const [isAuth, setIsAuth] = useState(false);
+
+  const onLogIn = (user) => {
+    setIsAuth(auth.login(user));
+  };
+
+  const onLogout = () => {
+    setIsAuth(auth.logout());
+  };
+
   return (
     <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/main" element={<Main />} />
+      {isAuth ? (
+        <Route path="/" element={<Main onLogout={onLogout} />} />
+      ) : (
+        <Route path="/" element={<Login onLogIn={onLogIn} />} />
+      )}
     </Routes>
   );
 }

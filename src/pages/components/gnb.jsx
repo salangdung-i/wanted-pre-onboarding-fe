@@ -18,7 +18,7 @@ import {
 import { AiOutlineCompass } from 'react-icons/ai';
 import { FiSend } from 'react-icons/fi';
 
-const gnb = (props) => {
+const gnb = ({ onLogout }) => {
   return (
     <Navbar>
       <NavContainer>
@@ -43,7 +43,7 @@ const gnb = (props) => {
             <Icon>
               <MdFavoriteBorder />
             </Icon>
-            <Icon>
+            <Icon onClick={onLogout}>
               <MdLogout />
             </Icon>
           </MenuDiv>
