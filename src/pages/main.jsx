@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import GNB from '../pages/components/gnb';
 import Feed from '../pages/components/feed';
 import styled from 'styled-components';
+import service from './../service/instagramService';
 
-const main = ({ onLogout, service }) => {
+const main = ({ onLogout }) => {
+  
   const [datas, setDatas] = useState([]);
 
   useEffect(() => {
