@@ -24,12 +24,12 @@ import { GrSend } from 'react-icons/gr';
 const defaultImg = '../images/defaultImg.jpeg';
 const feed = ({ data }) => {
   const {
-    username,
-    userProfilePhotoURL,
-    userProfilePhotoName,
-    cardPhotoName,
-    cardPhotoURL,
-    likeCount,
+    name,
+    profileURL,
+    profileName,
+    photoName,
+    photoURL,
+    like,
     comments,
   } = data;
   const [commentList, setCommentList] = useState(comments);
@@ -52,17 +52,17 @@ const feed = ({ data }) => {
           <Img
             style={{ display: loaded ? 'block' : 'none' }}
             onLoad={onLoad}
-            src={userProfilePhotoURL || defaultImg}
-            alt={userProfilePhotoName}
+            src={profileURL || defaultImg}
+            alt={profileName}
           />
-          <Name>{username}</Name>
+          <Name>{name}</Name>
         </User>
         <Detail>
           <BsThreeDots />
         </Detail>
       </CardHeader>
       <Div>
-        <ContentImg src={cardPhotoURL} alt={cardPhotoName} />
+        <ContentImg src={photoURL} alt={photoName} />
         <Div>
           <MenuDiv>
             <IconsDiv>
@@ -82,7 +82,7 @@ const feed = ({ data }) => {
           </MenuDiv>
         </Div>
         <Board>
-          <Like>좋아요 {likeCount.toLocaleString()}개</Like>
+          <Like>좋아요 {like.toLocaleString()}개</Like>
           <Comment onAddComment={onAddComment} commentList={commentList} />
         </Board>
       </Div>

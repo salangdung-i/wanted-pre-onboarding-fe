@@ -36,7 +36,7 @@ const comment = ({ onAddComment, commentList }) => {
         {commentList &&
           commentList.map((comment, i) => (
             <Comment key={i}>
-              <SpanName>{comment.username} </SpanName>
+              <SpanName>{comment.user} </SpanName>
               <SpanComment>{comment.comment}</SpanComment>
             </Comment>
           ))}

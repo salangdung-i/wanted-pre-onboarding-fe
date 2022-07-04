@@ -1,65 +1,65 @@
 [
   {
     "index": 1,
-    "username": "DailySarah",
-    "userProfilePhotoURL": "",
-    "userProfilePhotoName": "no profile img",
-    "cardPhotoURL": "../images/postImg01.jpeg",
-    "cardPhotoName": "600x500",
-    "likeCount": 1,
+    "name": "DailySarah",
+    "profileURL": "",
+    "profileName": "no profile img",
+    "photoURL": "../images/postImg01.jpeg",
+    "photoName": "600x500",
+    "like": 1,
     "comments": [
       {
-        "username": "DailySarah",
+        "user": "DailySarah",
         "comment": "안녕하세요! 저의 첫 게시물이에요.😄"
       },
       {
-        "username": "CuteCookieDough",
+        "user": "CuteCookieDough",
         "comment": "@DailySarah님 반갑습니다. 맞팔해요~"
       }
     ]
   },
   {
     "index": 2,
-    "username": "CuteCookieDough",
-    "userProfilePhotoURL": "../images/face-01.jpg",
-    "userProfilePhotoName": "face-01",
-    "cardPhotoURL": "../images/postImg02.jpeg",
-    "cardPhotoName": "600x500",
-    "likeCount": 1111111,
+    "name": "CuteCookieDough",
+    "profileURL": "../images/face-01.jpg",
+    "profileName": "face-01",
+    "photoURL": "../images/postImg02.jpeg",
+    "photoName": "600x500",
+    "like": 1111111,
     "comments": [
       {
-        "username": "CuteCookieDough",
+        "user": "CuteCookieDough",
         "comment": "요즘 여러분의 기분은 어떠신가요?"
       }
     ]
   },
   {
     "index": 3,
-    "username": "Eunoia",
-    "userProfilePhotoURL": "../images/face-03.jpg",
-    "userProfilePhotoName": "face-03",
-    "cardPhotoURL": "../images/postImg05.jpeg",
-    "cardPhotoName": "600x500",
-    "likeCount": 1234,
+    "name": "Eunoia",
+    "profileURL": "../images/face-03.jpg",
+    "profileName": "face-03",
+    "photoURL": "../images/postImg05.jpeg",
+    "photoName": "600x500",
+    "like": 1234,
     "comments": [
       {
-        "username": "Eunoia",
+        "user": "Eunoia",
         "comment": "요즘 부쩍 떠나고 싶네요~ 바다로~ 산으로~"
       },
       {
-        "username": "DailySarah",
+        "user": "DailySarah",
         "comment": "어머~ 저도요! 저번에 제주도를 갔다왔는데 맛집 추천드릴까요?"
       },
       {
-        "username": "Hackers_92",
+        "user": "Hackers_92",
         "comment": "저는 업무가 너무 많아서 회사에서 모든 시간을 보내고있어요.😢"
       },
       {
-        "username": "Eunoia",
+        "user": "Eunoia",
         "comment": "@Hackers_92님은 워커홀릭이시군요!"
       },
       {
-        "username": "Hackers_92",
+        "user": "Hackers_92",
         "comment": "@Eunoia 🤣🤣🤣 그럴리가요~ 워커홀릭은 아니지만, 일은 정신이 혼미해질만큼 많습니다."
       }
     ]
